@@ -1,0 +1,15 @@
+{
+  "name": "sqlite-keystore"
+  ,"description": "A simple key store backed by SQLite"
+  ,"version": "0.0.1"
+  ,"author": "Joshua Erickson <josh@snoj.us>"
+  ,"license" : "MIT"
+  ,"repository": {
+    "type" : "git",
+    "url"  : "git://github.com/snoj/sqlite-keystore.git" 
+  }
+  ,"keywords": ["keystore", "sqlite"]
+  ,"dependencies": {
+    "sqlite3": "*"
+  }
+}
