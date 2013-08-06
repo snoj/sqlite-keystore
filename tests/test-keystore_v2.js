@@ -1,7 +1,9 @@
 var testName = "Entry 1";
 console.time(testName);
 var sk = require('../lib/sqlite-keystore_v2.js');
-var d = new sk(__dirname + '/../test.db');
+var dbname = __dirname + '/../test.db';
+//dbname = ':memory:';
+var d = new sk(dbname);
 var err_f = function(err) {
   console.log(err);
 }
@@ -10,13 +12,12 @@ d.on('error', err_f);
 c.on('error', err_f);
 //d.db.on('error', err_f);
 
+c.addIndex('test');
 c.addIndex('test2', function(err, i) {
   console.log("test2 index err:", err);
-  console.log("test2 index:", i)
+  console.log("test2 index:", c.indexes);
 });
-c.addIndex('test', function(err, i){
-  console.log(c.indexes);
-});
+
 //c.db.on('error', function(e) { console.log(e); });
 //c.db.on('open', function() { console.log('open!'); });
 var ran = 0;
