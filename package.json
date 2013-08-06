@@ -1,15 +1,16 @@
 {
   "name": "sqlite-keystore"
-  ,"description": "A simple key store backed by SQLite"
-  ,"version": "0.0.1"
+  ,"description": "A somewhat simple key store backed by SQLite"
+  ,"version": "0.1.0"
   ,"author": "Joshua Erickson <josh@snoj.us>"
   ,"license" : "MIT"
   ,"repository": {
     "type" : "git",
-    "url"  : "git://github.com/snoj/sqlite-keystore.git" 
+    "url"  : "git://github.com/soterinsights/sqlite-keystore.git" 
   }
   ,"keywords": ["keystore", "sqlite"]
   ,"dependencies": {
-    "sqlite3": "*"
+    "sqlite3": "2.x"
+    ,"merge-recursive": "0.0.x"
   }
 }

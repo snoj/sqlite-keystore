@@ -2,7 +2,7 @@ var testName = "Entry 1";
 console.time(testName);
 var sk = require('../lib/sqlite-keystore_v2.js');
 var dbname = __dirname + '/../test.db';
-//dbname = ':memory:';
+dbname = ':memory:';
 var d = new sk(dbname);
 var err_f = function(err) {
   console.log(err);
